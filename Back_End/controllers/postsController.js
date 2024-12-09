@@ -1,5 +1,7 @@
 const pool = require('../db/db');
 
+//Esto corresponde al punto 3 del desafio 2 y lo tenia listo del desafio 1...
+//Aunqeu el material de apoyo sirve entiendo que con lo que ya habia desarrollado no deberia tener problemas.... integré la carpeta src pero no la utilicé
 const getPosts = async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM posts');
@@ -27,6 +29,7 @@ const createPost = async (req, res) => {
     }
   };
 
+  //Esto tambien es para el punto 1 el cual lo tenia listo de la semana pasada
 const likePost = async (req, res) => {
   const { id } = req.params;
   try {
@@ -41,6 +44,7 @@ const likePost = async (req, res) => {
   }
 };
 
+ //esto tambien lo tenia listo y corresponde al punto 2 del desafio 2
 const deletePost = async (req, res) => {
   const { id } = req.params;
   try {
